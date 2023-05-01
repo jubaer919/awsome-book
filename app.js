@@ -52,7 +52,7 @@ addButton.addEventListener('click', () => {
    if (event.target.tagName === 'BUTTON') {
      const index = parseInt(event.target.dataset.index, 10);
      removeBook(index);   
- localStorage.setItem('books', JSON.stringify(books));
+ 
   }
 });
 
