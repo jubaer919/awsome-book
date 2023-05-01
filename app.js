@@ -48,13 +48,13 @@ addButton.addEventListener('click', () => {
   authorInput.value = '';
 });
 
-// booksList.addEventListener('click', (event) => {
-//   if (event.target.tagName === 'BUTTON') {
-//     const index = parseInt(event.target.dataset.index, 10);
-//     removeBook(index);
-//     localStorage.setItem('books', JSON.stringify(books));
-//   }
-// });
+ booksList.addEventListener('click', (event) => {
+   if (event.target.tagName === 'BUTTON') {
+     const index = parseInt(event.target.dataset.index, 10);
+     removeBook(index);   
+ localStorage.setItem('books', JSON.stringify(books));
+  }
+});
 
 removeButton.addEventListener('click', () => {
   books = [];
