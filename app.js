@@ -1,62 +1,77 @@
-// Define the book collection array
-let books = [];
+class BookCollection {
+  constructor() {
+    this.books = [];
+    this.titleInput = document.getElementById('title');
+    this.authorInput = document.getElementById('author');
+    this.addButton = document.getElementById('add');
+    this.removeButton = document.getElementById('remove');
+    this.booksList = document.querySelector('#books ul');
 
-// Get the input fields and buttons
-const titleInput = document.getElementById('title');
-const authorInput = document.getElementById('author');
-const addButton = document.getElementById('add');
-const removeButton = document.getElementById('remove');
+    // Load the saved books from localStorage
+    if (localStorage.getItem('books')) {
+      this.books = JSON.parse(localStorage.getItem('books'));
+      this.renderBooks();
+    }
 
-// Get the books list and render it on the page
-const booksList = document.querySelector('#books ul');
-function renderBooks() {
-  booksList.innerHTML = '';
-  books.forEach((book, index) => {
-    const listItem = document.createElement('li');
-    listItem.innerHTML = `${book.title} by ${book.author}<button data-index="${index}">Remove</button>`;
-    booksList.appendChild(listItem);
-  });
-}
+    // Add event listeners to the buttons
+    this.addButton.addEventListener('click', () => {
+      const title = this.titleInput.value;
+      const author = this.authorInput.value;
+      this.addBook(title, author);
+      localStorage.setItem('books', JSON.stringify(this.books));
+      this.titleInput.value = '';
+      this.authorInput.value = '';
+    });
 
-// Add a book to the collection
-function addBook(title, author) {
-  const book = { title, author };
-  books.push(book);
-  renderBooks();
-}
+    this.booksList.addEventListener('click', (event) => {
+      if (event.target.tagName === 'BUTTON') {
+        const index = parseInt(event.target.dataset.index, 10);
+        this.removeBook(index);
+        localStorage.setItem('books', JSON.stringify(this.books));
+      }
+    });
 
-// Remove a book from the collection
-function removeBook(index) {
-  books = books.filter((book, i) => i !== index);
-  renderBooks();
-}
-
-// Load the saved books from localStorage
-if (localStorage.getItem('books')) {
-  books = JSON.parse(localStorage.getItem('books'));
-  renderBooks();
-}
-
-// Add event listeners to the buttons
-addButton.addEventListener('click', () => {
-  const title = titleInput.value;
-  const author = authorInput.value;
-  addBook(title, author);
-  localStorage.setItem('books', JSON.stringify(books));
-  titleInput.value = '';
-  authorInput.value = '';
-});
-
-booksList.addEventListener('click', (event) => {
-  if (event.target.tagName === 'BUTTON') {
-    const index = parseInt(event.target.dataset.index, 10);
-    removeBook(index);
-    localStorage.setItem('books', JSON.stringify(books));
+    this.removeButton.addEventListener('click', () => {
+      this.books = [];
+      this.renderBooks();
+      localStorage.setItem('books', JSON.stringify(this.books));
+    });
   }
-});
 
-removeButton.addEventListener('click', () => {
-  books = [];
-  renderBooks();
-  localStorage.setItem('books', JSON.stringify(books));
-});
+  renderBooks() {
+    this.booksList.innerHTML = '';
+    this.books.forEach((book, index) => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('list-items');
+      if (index % 2 === 0) {
+        listItem.classList.add('gray-bg');
+      }
+      listItem.innerHTML = `${book.title} by "${book.author}"<button data-index="${index}">Remove</button>`;
+      this.booksList.appendChild(listItem);
+    });
+  }
+
+  addBook(title, author) {
+    // Trim whitespace from the title and author inputs
+    title = title.trim();
+    author = author.trim();
+
+    // Check if either input is empty or contains only whitespace
+    if (!title || !author) {
+      return;
+    }
+
+    const book = { title, author };
+    this.books.push(book);
+    this.renderBooks();
+  }
+
+  removeBook(index) {
+    this.books = this.books.filter((book, i) => i !== index);
+    this.renderBooks();
+  }
+}
+
+const myBookCollection = new BookCollection();
+
+myBookCollection.init();
