@@ -2,7 +2,7 @@ export default function dateAndTime() {
   // Get the current local time and date
   const now = new Date();
 
- const options = {
+  const options = {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
