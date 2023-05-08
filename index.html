@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" type="module" defer></script>
+    <title>Awesome Book</title>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><a href="#" class="brand-logo">Awesome Books</a></div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="list-item"><span id="list" class="nav-links active">List</span></li>
+        <li class="list-item"><span id="add-new" class="nav-links">Add New</span></li>
+        <li class="list-item"><span id="contact" class="nav-links">Contact</span></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="date-time"></div>
+    <div class="wraper">
+      <div id="books">
+        <h2 class="heading-secondary">All Awesome Books</h2>
+        <ul class="list"></ul>
+        <button id="remove">Remove all</button><br><br><br><br>
+      </div>
+      <div id="add-section" class="add-books none">
+        <div class="add-section-container"> 
+          <h2 class="heading-secondary">add a new book</h2>
+          <input type="text" id="title" placeholder="enter your title name"/><br><br>
+          <input type="text" id="author" placeholder="enter you author name"/><br><br>
+          <button id="add">Add</button>
+        </div>
+      </div>
+      <div id="section-contact" class="none">
+        <h2 class="heading-secondary">Contact Information</h2>
+        <div class="">
+          <p>Do you have any questions or just want to say hello? You can reach out to us</p>
+          <ul class="contact-list">
+            <li>Our email: habtamu.alemayehu16@gmail.com and jubaer.diu@gmail.com</li>
+            <li>Our Phone: 01234567895 and 01731389056</li>
+            <li>Our Address: 120 Street, 1452 House, Ethiopia and 1105 street, 105 House , Dhaka , Bangladesh</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
