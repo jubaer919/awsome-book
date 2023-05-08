@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+* a {
+  color: black;
+}
+
+.header {
+  margin-top: .625rem;
+  border: 2px solid black;
+  padding: 5px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-item {
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.list-item:not(:last-child) {
+  border-right: 2px solid black;
+}
+
+.active {
+  color: blue;
+}
+
+.block {
+  display: block;
+}
+
+.nav-links {
+  padding: 5px;
+}
+
+.none {
+  display: none;
+}
+
+.wraper {
+  max-width: 60%;
+  margin: 2rem auto;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.list {
+  width: 80%;
+  border: 1px solid black;
+  margin: 2rem auto;
+  padding: 1rem 1rem;
+  text-align: left;
+}
+
+.list-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: .312rem;
+}
+
+.list-items:not(:last-child) {
+  margin-bottom: .625rem;
+}
+
+.list-items button {
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.gray-bg {
+  background-color: #ddd;
+}
+
+#add {
+  padding: 10px 22px;
+}
+
+input{
+  padding: .625rem;
+}
+
+.add-section-container {
+  width: 35%;
+  margin: 0 auto;
+  text-align: right;
+  padding: 1rem;
+}
+
+.add-section-container input {
+  width: 100%;
+  overflow: hidden;
+}
+
+.heading-secondary {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-list > li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.date-time {
+  padding: 1rem;
+  text-align: right;
+}

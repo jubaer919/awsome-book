@@ -1,39 +1,12 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-    - [🚀 Live Demo](#live-demo)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -46,170 +19,168 @@ After you're finished please remove all the comments and instructions!
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 
-# 📖 Portfolio <a name="about-project"></a>
+# 📖 Awesome  Books Microverse! Project <a name="about-project"></a>
+
+Awesome Books Microverse! project is a repository consisting of the following files:
+- HTML file 
+- CSS file 
+- JS files
+- Html,CSS and JS linters file
 
 
-**Awesome books** is a book stor website
+The repository also contains files for setting up linters and validators.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="#">HTML5</a></li>
-    <li><a href="#">CSS3</a></li>
-    <li><a href="#">js</a></li>
-  </ul>
-</details>
 
-<details>
-  <summary>Server</summary>
   <ul>
-    <li><a href="#">N/A</a></li>
+    <li><a href="https://microverse.notion.site/HTML-CSS-Get-a-head-start-275eb85fd34b4416aa06ec635d69cdaf">HTML</a></li>
+    <li><a href="https://microverse.notion.site/HTML-CSS-Get-a-head-start-275eb85fd34b4416aa06ec635d69cdaf">CSS</a></li>
+       <li><a href="https://microverse.notion.site/HTML-CSS-Get-a-head-start-275eb85fd34b4416aa06ec635d69cdaf">JS</a></li>
   </ul>
-</details>
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="#">N/A</a></li>
-  </ul>
-</details>
 
-<!-- Features -->
 
 ### Key Features <a name="key-features"></a>
+## Awesome Books - [HTML/CSS & JavaScript Awesome Books project](https://github.com/microverseinc/curriculum-javascript/blob/main/books/m2_plain_js_classes_v1_1.md)
+### Features Added:
+- Create a collection that keeps a list of books 
+- Create a function to add a new book to the collection, with title and author
+- Create a function to remove a book from the collection 
+- Display all books saved in the collection in the top part of the page.
+- when a user clicks the "Add" button:
+  - A new book is added to the collection.
+  - The new book is displayed in the page.
+- when a user clicks the "Remove" button:
+  - The correct book is removed from the collection.
+   - The correct book dissapears from the page.
+- Data is preserved in the browser's memory by using localStorage.
+- JavaScript classes used instead of objects and arrays.
+- Class methods created to add and remove books.
+- CSS styles Added to the application to make it match [this](https://github.com/microverseinc/curriculum-javascript/blob/main/books/images/awesome_books_core_elements.png) wireframe.
 
-- **book store**
-- **add and remove books**
-- **display all books**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://jubaer919.github.io/Portfolio/)
+- [Live Demo](https://benawi.github.io/Microverse-Awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
-
-In order to run this project you need:
-- A basic knowledge of HTML, CSS & GitHub
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
-
 ### Setup
 
 Clone this repository to your desired folder:
 
+> cd my-folder
+> git clone git@github.com:myaccount/my-project.git
 
-Example commands:
+### Prerequisites
 
-```sh
-  cd [to your desired folder]
-  git clone https://github.com/jubaer919/Portfolio.git
-```
+In order to run this project you need:
+
+- gitHub account;
+- git installed on your OS.
+
 ### Install
+> https://github.com/microverseinc/linters-config/tree/master/html-css-js
+- Installations required to run this project:
 
-Install this project with:
+### Webhint installation. 
+- Run the following command:
+> npm install --save-dev hint@7.x
 
-- You just have to open the `index.html` file
+### Stylelint installation.
+- Run the following command:
+> npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+
+### ESLint
+- Run
+
+> npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
 
 ### Usage
 
-To run the project, execute the following command:
-
-- You just have to open the `index.html` file
+You can use this project by cloning it to your folder and changing index.html and styles.css files.
 
 ### Run tests
 
-- No tests here 😊
+To run tests, run the following commands:
+
+To track linter errors locally follow these steps:  
+
+Download all the dependencies run:
+```
+npm install
+```
+Track HTML linter errors run:
+```
+npx hint .
+```
+Track CSS linter errors run:
+```
+npx stylelint "**/*.{css,scss}"
+```
+Track JavaScript linter errors run:
+```
+npx eslint ."
+```
+
 ### Deployment
 
-You can deploy this project using:
-
-- Non deployable ⚠
+You can redeploy this project by adding new lines of code to source files.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
-
-- GitHub: [@Jubaer](https://github.com/jubaer919/awsome-book.git)
+👤 Habtamu Alemayehu 
+- GitHub: [@bena](https://github.com/Benawi)
+👤 Jubaer hossain maruf
+- GitHub:[jubaer919] (https://github.com/jubaer919)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
-- [ ] **Deploy live**
-- [ ] **Add some functionality**
+Awesome books: a complete website with navigation[this](https://github.com/microverseinc/curriculum-javascript/blob/main/books/m4_full_website_v1_1.md) will be added.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give it a star ⭐
+Give me ⭐️ If you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank
-- Microverse
+- I would like to thank Microverse program for providing me this great chance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-
-<!-- LICENSE -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./MIT.md) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

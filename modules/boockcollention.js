@@ -1,4 +1,4 @@
-class BookCollection {
+export default class BookCollection {
   constructor() {
     this.books = [];
     this.titleInput = document.getElementById('title');
@@ -6,13 +6,13 @@ class BookCollection {
     this.addButton = document.getElementById('add');
     this.removeButton = document.getElementById('remove');
     this.booksList = document.querySelector('#books ul');
-
+  
     // Load the saved books from localStorage
     if (localStorage.getItem('books')) {
       this.books = JSON.parse(localStorage.getItem('books'));
       this.renderBooks();
     }
-
+  
     // Add event listeners to the buttons
     this.addButton.addEventListener('click', () => {
       const title = this.titleInput.value;
@@ -22,7 +22,7 @@ class BookCollection {
       this.titleInput.value = '';
       this.authorInput.value = '';
     });
-
+  
     this.booksList.addEventListener('click', (event) => {
       if (event.target.tagName === 'BUTTON') {
         const index = parseInt(event.target.dataset.index, 10);
@@ -71,7 +71,3 @@ class BookCollection {
     this.renderBooks();
   }
 }
-
-const myBookCollection = new BookCollection();
-
-myBookCollection.init();
