@@ -10,7 +10,7 @@
 }
 
 .header {
-  margin-top: .625rem;
+  margin-top: 0.625rem;
   border: 2px solid black;
   padding: 5px 5vw;
   display: flex;
@@ -68,11 +68,11 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: .312rem;
+  padding: 0.312rem;
 }
 
 .list-items:not(:last-child) {
-  margin-bottom: .625rem;
+  margin-bottom: 0.625rem;
 }
 
 .list-items button {
@@ -88,8 +88,8 @@
   padding: 10px 22px;
 }
 
-input{
-  padding: .625rem;
+input {
+  padding: 0.625rem;
 }
 
 .add-section-container {
